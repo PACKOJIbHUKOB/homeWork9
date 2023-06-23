@@ -46,10 +46,8 @@ public class Main {
             totalPay += monthPay;
         }
         double averageTotal = (double) totalPay / arr.length;
-        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей", averageTotal);
-        System.out.println();
-    }
-
+        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей\n", averageTotal);
+     }
     private static void task4() {
         System.out.println("задача 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
