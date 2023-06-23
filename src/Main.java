@@ -28,30 +28,29 @@ public class Main {
     private static void task2() {
         System.out.println("задача 2");
         int[] arr = generateRandomArray();
-        int maxPay = -1;
-        int minPay = 200001;
+        int maxPay = arr[0];
+        int minPay = arr[0];
         for (int monthPay : arr) {
-            int current = monthPay;
-            if (current > maxPay) maxPay = current;
-            if (current<minPay) minPay = current;
+            if (monthPay > maxPay) {
+                maxPay = monthPay;}
+            if (monthPay<minPay) {
+                minPay = monthPay;}
         }
         System.out.println("Минимальная сумма трат за день составила " + minPay + " рублей. Максимальная сумма трат за день составила " + maxPay + " рублей");
     }
-
     private static void task3() {
         System.out.println("задача 3");
         int[] arr = generateRandomArray();
         int totalPay = 0;
-        for (int j : arr) {
-            totalPay += j;
+        for (int monthPay : arr) {
+            totalPay += monthPay;
         }
-        double length = arr.length;
-        double averageTotal = (double) totalPay / length;
+        double averageTotal = (double) totalPay / arr.length;
         System.out.printf("Средняя сумма трат за месяц составила %.2f рублей", averageTotal);
+        System.out.println();
     }
 
     private static void task4() {
-        System.out.println();
         System.out.println("задача 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length - 1; i >= 0; i--) {
